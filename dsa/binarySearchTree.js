@@ -92,7 +92,10 @@ class BST{
     }
 
     search(root,target){
-        
+        if(!root) return null
+        if(root.value===target) return true
+        if(root.value>target) return this.search(root.left,target)
+        else return this.search(root.right,target)
     }
 
     
