@@ -81,6 +81,26 @@ class SingleList{
             this.size--
         }
     }
+    swapMiddle(n){
+        if(!this.head||n>this.size) return 
+        let mid = Math.floor((this.size-n)/2)
+        let curr = this.head
+        for(let i=0;i<mid;i++){
+            curr = curr.next
+        }
+        let temp =[]
+        let next=curr
+        for(let i=0;i<n;i++){
+            temp.push(next.value)
+            next = next.next
+        }
+        temp.reverse()
+        next =curr
+        for(let i=0;i<n;i++){
+            next.value=temp[i]
+            next=next.next
+        }
+    }
     print(){
         let curr = this.head
         while(curr){
