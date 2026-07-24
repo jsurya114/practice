@@ -18,4 +18,4 @@ let handler ={
 
 let proxy = new Proxy(user,handler)
 
-proxy.name
+proxy.age=-2
