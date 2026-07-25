@@ -10,7 +10,7 @@ function missingelement(arr){
             res.push(i)
         }
     }
-    return arr
+    return res
 }
 
 console.log(missingelement(arr))
