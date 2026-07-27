@@ -1,10 +1,12 @@
 function mergesort(arr){
+
+    if(arr.length<=1) return arr
     let mid = Math.floor(arr.length/2)
 
     let left = mergesort(arr.slice(0,mid))
     let right=mergesort(arr.slice(mid))
 
-    return mergesort(arr,left,right)
+    return merge(arr,left,right)
 }
 
 
@@ -26,7 +28,7 @@ function merge(arr,left,right){
         result.push(left[i++])
     }
     while(j<right.length){
-        result.push(right[i++])
+        result.push(right[j++])
     }
 
     return result
