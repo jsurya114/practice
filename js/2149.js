@@ -20,17 +20,17 @@ function orders(arr){
         }
     }
 
-    while(i<left.length&&j<right.length){
-        res.push(left[i++])
-        res.push(right[j++])
+    while(i<right.length&&j<left.length){
+        res.push(right[i++])
+        res.push(left[j++])
     }
 
-    while(i<left.length){
-        res.push(left[i++])
+    while(i<right.length){
+        res.push(right[i++])
     }
 
-    while(j<right.length){
-        res.push(right[j++])
+    while(j<left.length){
+        res.push(left[j++])
     }
 
     return res
