@@ -19,7 +19,7 @@ function sortevenodd(arr){
         if(i%2===0){
             arr[i]=even[e++]
         }else{
-            arr[i]=even[o++]
+            arr[i]=odd[o++]
         }
     }
     return arr
