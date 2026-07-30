@@ -64,6 +64,18 @@ class SingleList{
         curr.next=curr.next.next
         this.size--
     }
+
+    removeMid(){
+        if(!this.head) return null
+        let mid = Math.floor(this.size/2)
+
+        let curr = this.head
+        for(let i=0;i<mid-1;i++){
+            curr=curr.next
+        }
+        curr.next=curr.next.next
+        this.size--
+    }
     removeV(value){
         if(!this.head) return null
         
@@ -79,6 +91,7 @@ class SingleList{
             }
             curr=curr.next
             this.size--
+            return 
         }
     }
     swapMiddle(n){
@@ -112,10 +125,10 @@ class SingleList{
 
 
 const sl = new SingleList()
-let arr = [1,2,3,4,5,6]
+let arr = [1,2,3,4,5]
 for(let i=0;i<arr.length;i++){
     sl.append(arr[i])
 }
-sl.addValue(6,7)
-sl.removeV(2)
+// sl.addValue(6,7)
+sl.removeMid()
 sl.print()
